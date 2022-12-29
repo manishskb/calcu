@@ -1,17 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+function add(a,b) {
+    let add = a +b;
+    return add;
+}
+
+function sub(a,b) {
+    let sub = a-b;
+    return sub;
+}
+
+function mult(a,b) {
+    let mult = a * b;
+    return mult;
+}
+
+function div(a,b) {
+    let div = a / b;
+    div = div.toFixed(2);
+    return div;
+}
+
+ReactDOM.render(
+    <>
+        <ol>
+            <li>{add(40,4)}</li>
+            <li>{sub(40,4)}</li>
+            <li>{mult(40,4)}</li>
+            <li>{div(40,3)}</li>
+        </ol>
+    </>,document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
